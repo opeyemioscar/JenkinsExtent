@@ -24,7 +24,7 @@ import base.BaseClass;
 	    //public static ExtentReports getInstance(String fileName) 
 	    public static ExtentReports getInstance() throws IOException{
 	        if (extent == null) {
-	            ExtentSparkReporter htmlReporter = new ExtentSparkReporter(System.getProperty("user.dir")+"/test-output/ExtentReport/MyReport.html");
+	            ExtentSparkReporter htmlReporter = new ExtentSparkReporter(System.getProperty("user.dir")+"/reports/MyReport.html");
 	            htmlReporter.loadXMLConfig(System.getProperty("user.dir") + "/extent-config.xml");
 				/*
 				 * htmlReporter.config().setTheme(Theme.STANDARD);
