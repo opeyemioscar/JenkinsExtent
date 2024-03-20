@@ -8,9 +8,9 @@ import org.testng.annotations.Test;
 import base.BaseClass;
 
 public class GoogleTest extends BaseClass {
-	@Test(priority = 1)
+	@Test(priority = 3)
 	public void firstTest() {
-		String actual = "Google";
+		String actual = "Google1";
 		String expected = driver.getTitle();
 			Assert.assertEquals(actual, expected);
 			System.out.println(expected);
@@ -20,7 +20,7 @@ public class GoogleTest extends BaseClass {
 			WebElement img = driver.findElement(By.xpath("//img[@alt='Google']"));
 			img.isDisplayed();
 	}
-	@Test(priority = 3)
+	@Test(priority = 1)
 	public void thirdTest() {
 		WebElement searchfield = driver.findElement(By.name("q"));	
 		searchfield.isDisplayed();
