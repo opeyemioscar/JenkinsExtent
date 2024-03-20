@@ -16,16 +16,15 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.MediaEntityBuilder;
 
 public class Listener extends ExtentManager implements ITestListener {
-	/*
-	 * public String messageBody; static Date d = new Date(); static String fileName
-	 * = "Extent_" + d.toString().replace(":", "_").replace(" ", "_") + ".html";
-	 */
-   // private static ExtentReports extent = ExtentManager.getInstance(System.getProperty("user.dir")+"/test-output/ExtentReport/MyReport.html");
+	public String messageBody;
+    static Date d = new Date();
+    static String fileName = "Extent_" + d.toString().replace(":", "_").replace(" ", "_") + ".html";
+    private static ExtentReports extent = ExtentManager.getInstance(System.getProperty("user.dir")+"\\reports\\"+fileName);
     public static ThreadLocal<ExtentTest> testReport = new ThreadLocal<ExtentTest>();
 
     @Override
     public void onTestStart(ITestResult result) {
-    	 test = extent.createTest(result.getTestClass().getName() + " @TestCase: " + result.getMethod().getMethodName());
+    	ExtentTest test = extent.createTest(result.getTestClass().getName() + " @TestCase: " + result.getMethod().getMethodName());
         testReport.set(test);
     }
 
