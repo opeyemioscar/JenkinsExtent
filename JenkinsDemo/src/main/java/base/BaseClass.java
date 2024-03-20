@@ -7,21 +7,21 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
-public class BaseClas {
+public class BaseClass {
 	public WebDriver driver;
 
 	@BeforeMethod
 	public void setup() {
-		if (System.getProperty("browser").equalsIgnoreCase("Chrome")) {
-
-			driver = new ChromeDriver();
-		} else if (System.getProperty("browser").equalsIgnoreCase("Firefox")) {
-
-			driver = new FirefoxDriver();
-		} else if (System.getProperty("browser").equalsIgnoreCase("IE")) {
-
-			driver = new EdgeDriver();
-		}
+		String browser = System.getProperty("browser");
+	    if (browser != null) {
+	        if (browser.equalsIgnoreCase("Chrome")) {
+	            driver = new ChromeDriver();
+	        } else if (browser.equalsIgnoreCase("Firefox")) {
+	            driver = new FirefoxDriver();
+	        } else if (browser.equalsIgnoreCase("Edge")) {
+	            driver = new EdgeDriver();
+	        } 
+	    }
 		driver.manage().window().maximize();
 		driver.get(System.getProperty("url"));
 		driver.get("https://www.google.com/");
