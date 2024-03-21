@@ -10,7 +10,8 @@ import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
@@ -37,12 +38,12 @@ public class BaseClass {
 	@BeforeMethod
 	public void setup() {
 		// WebDriverManager.chromedriver().setup();
-		/*
-		 * ChromeOptions chromeOptions= new ChromeOptions();
-		 * chromeOptions.addArguments("headless");
-		 * chromeOptions.addArguments("window-size=1980,1080");
-		 */
-		driver = new EdgeDriver();
+		
+		  ChromeOptions chromeOptions= new ChromeOptions();
+		  chromeOptions.addArguments("headless");
+		  chromeOptions.addArguments("window-size=1980,1080");
+		 
+		driver = new ChromeDriver(chromeOptions);
 		driver.manage().window().maximize();
 		driver.get("https://opensource-demo.orangehrmlive.com/");
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
