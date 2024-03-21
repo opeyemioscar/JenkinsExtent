@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-03-21T18:16:40 WAT" name="Suite" finished-at="2024-03-21T18:17:15 WAT" duration-ms="34607">
+    <groups>
+    </groups>
+    <test started-at="2024-03-21T18:16:40 WAT" name="Test" finished-at="2024-03-21T18:17:15 WAT" duration-ms="34607">
+      <class name="test.OrangeHRMTest">
+        <test-method is-config="true" signature="BeforeSuite()[pri:0, instance:test.OrangeHRMTest@2892d68]" started-at="2024-03-21T18:16:40 WAT" name="BeforeSuite" finished-at="2024-03-21T18:16:40 WAT" duration-ms="439" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeSuite -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:test.OrangeHRMTest@2892d68]" started-at="2024-03-21T18:16:40 WAT" name="setup" finished-at="2024-03-21T18:16:49 WAT" duration-ms="9028" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="loginPageTest()[pri:1, instance:test.OrangeHRMTest@2892d68]" started-at="2024-03-21T18:16:49 WAT" name="loginPageTest" finished-at="2024-03-21T18:16:50 WAT" duration-ms="1081" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginPageTest -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:test.OrangeHRMTest@2892d68]" started-at="2024-03-21T18:16:50 WAT" name="tearDown" finished-at="2024-03-21T18:16:52 WAT" duration-ms="1439" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=loginPageTest status=SUCCESS method=OrangeHRMTest.loginPageTest()[pri:1, instance:test.OrangeHRMTest@2892d68] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:test.OrangeHRMTest@2892d68]" started-at="2024-03-21T18:16:52 WAT" name="setup" finished-at="2024-03-21T18:16:59 WAT" duration-ms="7886" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyForgotPassword()[pri:2, instance:test.OrangeHRMTest@2892d68]" started-at="2024-03-21T18:16:59 WAT" name="verifyForgotPassword" finished-at="2024-03-21T18:17:00 WAT" duration-ms="468" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyForgotPassword -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:test.OrangeHRMTest@2892d68]" started-at="2024-03-21T18:17:00 WAT" name="tearDown" finished-at="2024-03-21T18:17:01 WAT" duration-ms="1425" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyForgotPassword status=SUCCESS method=OrangeHRMTest.verifyForgotPassword()[pri:2, instance:test.OrangeHRMTest@2892d68] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:test.OrangeHRMTest@2892d68]" started-at="2024-03-21T18:17:01 WAT" name="setup" finished-at="2024-03-21T18:17:09 WAT" duration-ms="7847" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="loginTest()[pri:3, instance:test.OrangeHRMTest@2892d68]" started-at="2024-03-21T18:17:09 WAT" name="loginTest" finished-at="2024-03-21T18:17:13 WAT" duration-ms="4100" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTest -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:test.OrangeHRMTest@2892d68]" started-at="2024-03-21T18:17:13 WAT" name="tearDown" finished-at="2024-03-21T18:17:15 WAT" duration-ms="1276" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=loginTest status=SUCCESS method=OrangeHRMTest.loginTest()[pri:3, instance:test.OrangeHRMTest@2892d68] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="AfterSuite()[pri:0, instance:test.OrangeHRMTest@2892d68]" started-at="2024-03-21T18:17:15 WAT" name="AfterSuite" finished-at="2024-03-21T18:17:15 WAT" duration-ms="383" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterSuite -->
+      </class> <!-- test.OrangeHRMTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
