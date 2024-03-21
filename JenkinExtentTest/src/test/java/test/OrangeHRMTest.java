@@ -33,13 +33,16 @@ public class OrangeHRMTest extends BaseClass {
 	// Assert if the element is present
 	Assert.assertNotNull(forgotPassword, ("Forgot Password link is not found on the page."));
 	}
-	/*
-	 * @Test public void sampleCase() {
-	 * ExtentManager.test.createNode("Validation1"); Assert.assertTrue(true);
-	 * ExtentManager.test.createNode("Validation2"); Assert.assertTrue(true);
-	 * ExtentManager.test.createNode("Validation3"); Assert.assertTrue(true);
-	 * ExtentManager.test.createNode("Validation4--changes--");
-	 * Assert.assertTrue(true); }
-	 */
+	
+	  @Test public void sampleCase() {
+	  ExtentManager.test.createNode("Validation1");
+	  Assert.assertTrue(true);
+	  ExtentManager.test.createNode("Validation2"); 
+	  Assert.assertTrue(true);
+	  ExtentManager.test.createNode("Validation3");
+	  Assert.assertTrue(true);
+	  ExtentManager.test.createNode("Validation4--changes--");
+	  Assert.assertTrue(true); }
+	 
 	 
 }

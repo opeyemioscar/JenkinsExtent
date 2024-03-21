@@ -67,13 +67,12 @@ public class BaseClass {
 		} catch (Exception e) {
 			e.getMessage();
 		}
-		return destination;
 
-		/*
-		 * // This new path for jenkins String newImageString =
-		 * "http://localhost:8082/job/Demo4/ws/ExtentDemo/ScreenShot/" + filename + "_"
-		 * + dateName + ".png"; return newImageString;
-		 */
+		// This new path for jenkins
+		String newImageString = "http://localhost:8080/job/JenkinExtentTest/ws/JenkinExtentTest/ScreenShot/" + filename + "_" + dateName
+				+ ".png";
+		return newImageString;
+
 	}
 
 	public static String getCurrentTime() {
