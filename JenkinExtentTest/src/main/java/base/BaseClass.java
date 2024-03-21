@@ -13,10 +13,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestResult;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
-import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.BeforeTest;
 
 import extentManager.ExtentManager;
 
@@ -34,7 +34,7 @@ public class BaseClass {
 		ExtentManager.endReport();
 	}
 
-	@BeforeTest
+	@BeforeMethod
 	public void setup() {
 		// WebDriverManager.chromedriver().setup();
 		/*
@@ -49,7 +49,7 @@ public class BaseClass {
 		wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 	}
 
-	@AfterTest
+	@AfterMethod
 	public void tearDown(ITestResult result) {
 		if (driver != null) {
 			driver.quit();
@@ -67,12 +67,13 @@ public class BaseClass {
 		} catch (Exception e) {
 			e.getMessage();
 		}
+		return destination;
 
-		// This new path for jenkins
-		String newImageString = "http://localhost:8082/job/Demo4/ws/ExtentDemo/ScreenShot/" + filename + "_" + dateName
-				+ ".png";
-		return newImageString;
-
+		/*
+		 * // This new path for jenkins String newImageString =
+		 * "http://localhost:8082/job/Demo4/ws/ExtentDemo/ScreenShot/" + filename + "_"
+		 * + dateName + ".png"; return newImageString;
+		 */
 	}
 
 	public static String getCurrentTime() {

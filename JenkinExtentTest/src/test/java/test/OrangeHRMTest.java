@@ -10,13 +10,13 @@ import extentManager.ExtentManager;
 
 public class OrangeHRMTest extends BaseClass {
 	
-	@Test
+	@Test(priority = 1)
 	public void loginPageTest() throws InterruptedException {
 		WebElement imgElement=driver.findElement(By.xpath("//img[@alt='company-branding']"));
 		wait.until(ExpectedConditions.visibilityOf(imgElement));
 		Assert.assertTrue(imgElement.isDisplayed());
 	}
-	@Test
+	@Test(priority = 2)
 	public void loginTest() throws InterruptedException {
 		driver.findElement(By.xpath("//input[@placeholder='Username']")).sendKeys("Admin");
 		driver.findElement(By.xpath("//input[@placeholder='Password']")).sendKeys("admin123");
@@ -26,22 +26,20 @@ public class OrangeHRMTest extends BaseClass {
         String expectedTitle="OrangeHRM";
         Assert.assertEquals(actualTitle, expectedTitle);
 	}
-	@Test
+	@Test(priority = 3)
 	public void verifyForgotPassword() {
 	WebElement forgotPassword =	driver.findElement(By.xpath("//p[@class='oxd-text oxd-text--p orangehrm-login-forgot-header']"));
 	wait.until(ExpectedConditions.visibilityOf(forgotPassword));
 	// Assert if the element is present
 	Assert.assertNotNull(forgotPassword, ("Forgot Password link is not found on the page."));
 	}
-	
-	  @Test public void sampleCase() {
-	  ExtentManager.test.createNode("Validation1"); 
-	  Assert.assertTrue(true);
-	  ExtentManager.test.createNode("Validation2"); 
-	  Assert.assertTrue(true);
-	  ExtentManager.test.createNode("Validation3"); 
-	  Assert.assertTrue(true);
-	  ExtentManager.test.createNode("Validation4--changes--");
-	  Assert.assertTrue(true); }
+	/*
+	 * @Test public void sampleCase() {
+	 * ExtentManager.test.createNode("Validation1"); Assert.assertTrue(true);
+	 * ExtentManager.test.createNode("Validation2"); Assert.assertTrue(true);
+	 * ExtentManager.test.createNode("Validation3"); Assert.assertTrue(true);
+	 * ExtentManager.test.createNode("Validation4--changes--");
+	 * Assert.assertTrue(true); }
+	 */
 	 
 }
