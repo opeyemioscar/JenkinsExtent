@@ -31,7 +31,7 @@ public class TestChasescroll extends BaseClass {
 
 	@Test(priority = 4)
 	public void verifyurl() {
-		WebElement searchField = driver.findElement(By.xpath("//input[@placeholder='Search for users, event or...']"));
+		WebElement searchField = driver.findElement(By.xpath("//input[@p1laceholder='Search for users, event or...']"));
 		 wait.until(ExpectedConditions.visibilityOf(searchField)).click();
 		String actual = "https://chasescroll-next-app-test.vercel.app/dashboard/event";
 		String expected = driver.getCurrentUrl();
