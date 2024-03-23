@@ -19,7 +19,7 @@
         <!-- report name - displayed at top-nav -->
         <reportName>OrangeHRMProject Report
          <![CDATA[
-                <img src='http://localhost:8080/job/JenkinExtentTest/ws/JenkinExtentTest/Logo/ohrm_branding.png'/>
+                <img src='C:\Users\hp\git\JenkinsExtent\JenkinsExtent\ChaseScrollGithub\Logo\chasescroll-logo.png'/>
             ]]>
         </reportName>
        

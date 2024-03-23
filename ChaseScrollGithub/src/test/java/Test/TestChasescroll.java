@@ -2,6 +2,7 @@ package Test;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -16,7 +17,7 @@ public class TestChasescroll extends BaseClass {
 
 	@Test(priority = 2)
 	public void ValidePageTitle() {
-		String actual = "Creating Unforgetabble Memories";
+		String actual = "Creating Unforgetable Memories";
 		String expect = driver.getTitle();
 		Assert.assertEquals(actual, expect);
 	}
@@ -24,15 +25,17 @@ public class TestChasescroll extends BaseClass {
 	@Test(priority = 3)
 	public void loginTest() {
 		driver.findElement(By.xpath("//input[@placeholder='Enter your Email or Username']")).sendKeys("Davido");
-		driver.findElement(By.xpath("input[placeholder='Enter your password']")).sendKeys("Test1234");
+		driver.findElement(By.xpath("//input[@placeholder='Enter your password']")).sendKeys("Test1234");
 		driver.findElement(By.xpath("//button[normalize-space()='Login']")).click();
 	}
 
 	@Test(priority = 4)
 	public void verifyurl() {
+		WebElement searchField = driver.findElement(By.xpath("//input[@placeholder='S1earch for users, event or...']"));
+		 wait.until(ExpectedConditions.visibilityOf(searchField)).click();
 		String actual = "https://chasescroll-next-app-test.vercel.app/dashboard/event";
 		String expected = driver.getCurrentUrl();
 		Assert.assertEquals(actual, expected);
 	}
-
+	
 }

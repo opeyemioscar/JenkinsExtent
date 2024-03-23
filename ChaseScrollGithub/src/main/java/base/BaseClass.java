@@ -11,18 +11,17 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.annotations.AfterMethod;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.BeforeTest;
 
 import extentManager.ExtentManager;
 
 public class BaseClass {
 	public static WebDriver driver;
-	
+	public static WebDriverWait wait;
 
 	@BeforeSuite
 	public void BeforeSuite() throws IOException {
@@ -35,24 +34,17 @@ public class BaseClass {
 	}
 
 	
-	@BeforeMethod
+	@BeforeTest
 	public void build() {
-		String browser = System.getProperty("browser");
-		if (driver != null) {
-		if (browser.equalsIgnoreCase("Chrome")) {
 			driver = new ChromeDriver();
-		}else if (browser.equalsIgnoreCase("Firefox")) {
-			driver = new FirefoxDriver();
-		}else if(browser.equalsIgnoreCase("Edge")) {
-			driver = new EdgeDriver();
-		}
 			driver.manage().window().maximize();
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-			driver.get(System.getProperty("url"));
+			driver.get("https://chasescroll-next-app-test.vercel.app/auth");
+			wait = new WebDriverWait(driver, Duration.ofSeconds(8));
 		}
-	}
 	
-	@AfterMethod
+	
+	@AfterTest
 	public void teardown() {
 		if(driver != null) {
 			driver.quit();
@@ -70,11 +62,15 @@ public class BaseClass {
 		} catch (Exception e) {
 			e.getMessage();
 		}
+		return destination;
+		
 
 		// This new path for jenkins
-		String newImageString = "http://localhost:8080/job/JenkinExtentTest/ws/JenkinExtentTest/ScreenShot/" + filename + "_" + dateName
-				+ ".png";
-		return newImageString;
+		/*
+		 * String newImageString =
+		 * "http://localhost:8080/job/JenkinExtentTest/ws/JenkinExtentTest/ScreenShot/"
+		 * + filename + "_" + dateName + ".png"; return newImageString;
+		 */
 
 	}
 
