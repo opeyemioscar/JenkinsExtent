@@ -66,15 +66,14 @@ public class BaseClass {
 		} catch (Exception e) {
 			e.getMessage();
 		}
-		return destination;
+	
 		
 
 		// This new path for jenkins
-		/*
-		 * String newImageString =
-		 * "http://localhost:8080/job/JenkinExtentTest/ws/JenkinExtentTest/ScreenShot/"
-		 * + filename + "_" + dateName + ".png"; return newImageString;
-		 */
+		
+		  String newImageString = "http://localhost:8080/job/Chasescroll/ws/ChaseScrollGithub/ScreenShot/"+ filename + "_" + dateName + ".png";
+		  return newImageString;
+		 
 
 	}
 
